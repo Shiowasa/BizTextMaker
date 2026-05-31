@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>顧客入力フォーム</title>
+
+    <link rel="stylesheet" href="style.css/style.css">
+
+
+</head>
+
+<body>
+
+    <h1>顧客入力フォーム</h1>
+    
+    <!-- クライアントの種類を選択するラジオボタン -->
+    <p>
+        <label class="client">
+            <input type="radio" name="clientType" value="corporate" required>
+            法人
+        </label>
+
+        <label class="client">
+            <input type="radio" name="clientType" value="individual">
+            個人
+        </label>
+    </p>
+
+
+    <!-- 社名 / 氏名 -->
+    <p class="name-row">
+        <label for="company" >
+            社名 / 氏
+        </label>
+        <input type="text" placeholder="例）株式会社 または 山田" required id="company">
+    
+        <label class="short-label" for="name">
+            名
+        </label>
+        <input class="short-input" type="text" id="name" placeholder="例）ABC または 太郎" required>
+    </p>
+
+    <!-- 部署 -->
+    <p >
+        <label for="department">
+            部署
+        </label>
+        <input type="text" id="department" placeholder="例）営業部">
+    
+        <label class="short-label" for="contactPerson">
+            担当者
+        </label>
+        <input class="short-input" type="text" id="contactPerson" placeholder="例）田中">
+    </p>
+
+    <!-- 郵便番号 -->
+    <p>
+        <label for="postalCode">
+            郵便番号
+        </label>
+        <input type="text" id="postalCode" placeholder="例）123-4567">
+    </p>
+
+    <!-- 住所 -->
+    <p>
+        <label for="address">
+            住所
+        </label>
+        <input type="text" id="address" placeholder="例）東京都千代田区1-2-3">
+    </p>
+
+    <!-- 電話番号 -->
+    <p>
+        <label for="phoneNumber">
+            電話番号
+        </label>
+        <input type="text" id="phoneNumber" placeholder="例）03-1234-5678" required>
+    </p>    
+
+    <!-- メールアドレス -->
+    <p>
+        <label for="email">
+            メールアドレス
+        </label>
+        <input type="email" id="email" placeholder="例）user@example.com">
+    </p>
+
+    <!-- 備考 -->
+    <p>
+        <label  for="notes">
+            備考
+        </label>
+        <textarea id="notes" placeholder="備考内容"></textarea>
+    </p>
+
+    <!-- 登録ボタン -->
+    <p>
+        <form>
+
+            <button class="button" type="submit" value="登録">
+                登 録
+            </button>
+        
+        </form>
+    </p>
+
+</body>
+</html>

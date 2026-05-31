@@ -1,0 +1,79 @@
+/* head */
+h1 {
+    text-align: center;
+    color:#333;
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+-------------------------------------------
+
+/* body全体 */
+body {
+    font-family: 'Noto Sans JP', sans-serif, "Helvetica Neue", "Helvetica", "Hiragino Sans", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+label, input, textarea, select, button {
+    cursor: pointer;
+}
+-------------------------------------------
+/* row */
+.row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+/* client選択 */
+.client {
+    margin-right: 20px;
+}
+/* 入力フォームの位置調整 */
+label:not(.client) {
+    display: inline-block;
+    width: 120px;
+}
+
+/* 備考欄 */
+textarea {
+    display: inline-block;
+    width: 65%;
+    height: 50px;
+    vertical-align: top;
+}
+
+/* 右ラベル調整 */
+.short-label {
+    width: 60px;
+    text-align: right;
+}
+
+/* 右input調整
+.short-input {
+    margin-left: -10px;
+} */
+
+/* 登録ボタン */
+.button {
+    color: black;
+    background-color: white;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px 20px;
+    display:block;
+    margin: 20px auto;
+    border: 0.5px solid #333;
+    border-radius: 10px;
+    transition: background-color 0.5s;
+}
+
+.button:hover {
+    /* color: white; */
+    background-color: rgb(165, 165, 165);
+    opacity: 0.8;
+    border-color: rgb(165, 165, 165);
+    border:none;
+}

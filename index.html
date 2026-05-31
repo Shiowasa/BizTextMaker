@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BizTextMaker</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    
+
+</head>
+
+<body>
+    <h1>ビジネス文書生成ツール</h1>
+
+    <div class="company-info" id="companyInfo">
+        
+        <div class="company-block">
+            <!-- 会社情報 -->
+            <p>会社名: 株式会社ABC</p>
+            <p>〒000-0000</p>
+            <p>住所　: 鹿児島県○○○市○○○番地</p>
+            <p>電話　: 099-000-0000/FAX: 099-000-0001</p>
+            <p>mail : example@abc.com</p>
+            <p>担当者: 田中</p>
+        </div>
+    </div>
+
+    <!-- 入力フォーム -->
+    <div class="form-area">
+        
+        <!-- 発行日時 -->
+            <label class="form-item" for="issueDate">
+                発行日時
+            </label>
+            <input 
+                type="date" 
+                id="issueDate" 
+                name="issueDate"
+            >
+
+        <!-- 得意先名 -->
+            <label class="form-item" for="customerName">
+                得意先名：
+            </label>
+            
+            <input type="text"
+                id="customerName"
+                list="customerList"
+                placeholder="得意先名を入力">
+        
+            <datalist id="customerList">                
+            </datalist>    
+            
+        <!-- 文書の種類 -->
+            <label class="form-item" for="documentType">
+                文書の種類:
+            </label>
+                <select 
+                    id="documentType"
+                    name="documentType">
+
+                    <option value="">選択してください</option>
+                    <option value="kakaku">価格改定のお知らせ</option>
+                    <option value="yasumi">臨時休業のお知らせ</option>
+                    <option value="nouki">納期遅延のお知らせ</option>
+                </select>
+        
+        <!-- 文書内容 -->
+                <label class="form-item" for="documentContent">
+                    文書内容:
+                </label>
+                <textarea
+                    id="documentContent"
+                    rows="10">
+                </textarea>
+
+
+        <!-- 備考 -->
+            <label class="form-item" for="inputText">
+                備考欄:
+            </label>
+            <textarea
+                id="inputText"
+                rows="10"
+                placeholder="ここに備考を入力してください...">
+            </textarea>
+
+
+        <!-- 文書生成 -->
+            <button id="createButton">
+                文書生成
+            </button>
+        
+    </div>
+    <!-- フォームエリアここまで -->
+
+    <!-- 顧客登録 -->
+    <div class="customer-area">
+
+        <form id="customerForm">
+
+            <h2>顧客入力フォーム</h2>
+    
+            <!-- クライアントの種類を選択するラジオボタン -->
+            <p>
+                <label class="client">
+                    <input type="radio" name="clientType" value="corporate" required>
+                    法人
+                </label>
+
+                <label class="client">
+                    <input type="radio" name="clientType" value="individual">
+                    個人
+                </label>
+            </p>
+
+
+            <!-- 社名 / 氏名 -->
+            <p class="name-row">
+                <label for="nameLast">
+                    社名 / 氏
+                </label>
+                <input type="text" id="nameLast" placeholder="例）株式会社 または 山田" required>
+            
+                <label class="short-label" for="nameFirst" >
+                    名
+                </label>
+                <input class="short-input" type="text" id="nameFirst" placeholder="例）ABC または 太郎" required>
+            </p>
+
+            <!-- 部署 -->
+            <!-- <p >
+                <label for="department">
+                    部署
+                </label>
+                <input type="text" id="department" placeholder="例）営業部">
+            
+                <label class="short-label" for="contactPerson">
+                    担当者
+                </label>
+                <input class="short-input" type="text" id="contactPerson" placeholder="例）田中">
+            </p> -->
+
+            <!-- 郵便番号 -->
+            <p>
+                <label for="postalCode">
+                    郵便番号
+                </label>
+                <input type="text" id="postalCode" placeholder="例）123-4567" required>
+            </p>
+
+            <!-- 住所 -->
+            <p>
+                <label for="address">
+                    住所
+                </label>
+                <input type="text" id="address" placeholder="例）東京都千代田区1-2-3" required>
+            </p>
+
+            <!-- 電話番号 -->
+            <p>
+                <label for="phoneNumber">
+                    電話番号
+                </label>
+                <input type="text" id="phoneNumber" placeholder="例）03-1234-5678" required>
+            </p>    
+
+            <!-- メールアドレス -->
+            <!-- <p>
+                <label for="email">
+                    メールアドレス
+                </label>
+                <input type="email" id="email" placeholder="例）user@example.com">
+            </p> -->
+
+            <!-- 備考 -->
+            <!-- <p>
+                <label  for="notes">
+                    備考
+                </label>
+                <textarea id="notes" placeholder="備考内容"></textarea>
+            </p> -->
+
+            <!-- 登録ボタン -->
+            <p>
+                
+                <button class="button" type="submit" >
+                    登 録
+                </button>
+                
+            </p>
+
+            <!-- 顧客一覧表示 -->
+             <h3>登録済み顧客一覧</h3>
+
+             <div id="customerListArea">
+
+             </div>
+        </form>
+
+    </div>
+
+    <!-- 出力結果 -->
+    <div id="resultArea"> 
+        
+        <div id="result">
+        </div>
+    </div>
+
+
+    <script src="js/template.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+
+</html>
