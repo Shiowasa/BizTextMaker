@@ -67,13 +67,17 @@ body {
 }
 
 /* 中央寄せ */
-.customerName,
 .documentContent {
     text-align: center;
     font-size: 18px;
 }
 
 /* 左寄せ */
+.customerName{
+    text-align: left;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
 .documentTitle {
     text-align: center;
     font-size: 20px;
@@ -86,10 +90,12 @@ body {
 }
 
 
-/* 印刷時ボタン非表示 */
+/* プレビュー時非表示 */
 @media print {
 
-    button {
+    button,
+    h1,
+    h2 {
         display: none;
     }
 
