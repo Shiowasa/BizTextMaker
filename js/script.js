@@ -72,12 +72,10 @@ window.onload = function () {
 
         const documentContent =
             document.getElementById("documentContent").value;
-            
-            
+                        
         const inputText =
-            document.getElementById("inputText").value
-            = templateText;
-
+            document.getElementById("inputText").value;
+        
         //自社情報取得
         const companyInfo =
             document.getElementById("companyInfo").innerHTML;
@@ -89,15 +87,13 @@ window.onload = function () {
         const formattedInputText =
             inputText.replace(/\n/g, "<br>");//改行を<br>に変換
         
-        //タイトルと本文分割
-        const lines =
-            formattedContent.split("<br>");
-
+    
+       // 文書種類からタイトル取得
         const title =
-            lines[0];
+            documentType.options[documentType.selectedIndex].text;
 
         const body =
-            lines.slice(1).join("<br>");
+            formattedContent;
     
         //備考欄
         let remarksSection = "";
