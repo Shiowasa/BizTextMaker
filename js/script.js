@@ -72,9 +72,11 @@ window.onload = function () {
 
         const documentContent =
             document.getElementById("documentContent").value;
-        
+            
+            
         const inputText =
-            document.getElementById("inputText").value;
+            document.getElementById("inputText").value
+            = templateText;
 
         //自社情報取得
         const companyInfo =
