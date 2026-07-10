@@ -104,8 +104,18 @@ customerForm.addEventListener('submit', function (event) {
         document.getElementById("nameFirst").value;
 
         const postalCode =
-        document.getElementById("postalCode").value;
+            document.getElementById("postalCode").value.trim();
 
+        const postalPattern =
+            /^\d{3}-?\d{4}$/;
+
+        if (!postalPattern.test(postalCode)) {
+
+            alert("郵便番号は「1234567」または「123-4567」の形式で入力してください。");
+
+            return;
+        }
+        
         const address =
         document.getElementById("address").value;  
         
