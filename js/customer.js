@@ -21,10 +21,16 @@ const customerListArea =
 
 function displayCustomers() {
 
-    customerListArea.innerHTML = "";
+customerListArea.innerHTML = "";
+    // 表示用にコピーを作成
+    const sortedCustomers = [...customers];
+    sortedCustomers.sort(function(a, b) {
+        return(a.nameLast + a.nameFirst)
+        .localeCompare(b.nameLast + b.nameFirst,"ja");
+    });
 
 //顧客情報を表示
-for (const [index, customer] of customers.entries()){
+for (const [index, customer] of sortedCustomers.entries()){
 
         customerListArea.innerHTML +=
             "<p>" +
