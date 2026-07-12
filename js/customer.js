@@ -114,10 +114,16 @@ customerForm.addEventListener('submit', function (event) {
             }
 
         const address =
-        document.getElementById("address").value;  
+            document.getElementById("address").value;    
         
         const phoneNumber =
-        document.getElementById("phoneNumber").value;
+            document.getElementById("phoneNumber").value.trim();
+        const normalizedPhoneNumber = phoneNumber.replace(/-/g, "");
+        const phonePattern = /^\d{10,11}$/;
+            if (!phonePattern.test(normalizedPhoneNumber)) {
+            alert("電話番号は10桁または11桁の半角数字で入力してください。");
+            return;
+        }
 
     console.log(editingIndex);
 
