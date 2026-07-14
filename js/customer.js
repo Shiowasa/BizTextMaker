@@ -23,26 +23,33 @@ function displayCustomers() {
 
 customerListArea.innerHTML = "";
     // 表示用にコピーを作成
-    const sortedCustomers = [...customers];
+    const sortedCustomers = 
+    customers.map(function(customer, index) {
+    return {
+        originalIndex: index,
+        customer: customer
+    };
+});
     sortedCustomers.sort(function(a, b) {
-        return(a.nameLast + a.nameFirst)
-        .localeCompare(b.nameLast + b.nameFirst,"ja");
-    });
+    return (a.customer.nameLast + a.customer.nameFirst)
+        .localeCompare(
+            b.customer.nameLast + b.customer.nameFirst,
+            "ja"
+        );
+});
 
 //顧客情報を表示
-for (const [index, customer] of sortedCustomers.entries()){
-
+for (const item of sortedCustomers) {
         customerListArea.innerHTML +=
             "<p>" +
-            customer.nameLast +
+            item.customer.nameLast +
             " " +
-            customer.nameFirst +
-            "<button onclick=\"selectCustomer(" + index + ")\">選択</button>"+
-            "<button onclick=\"editCustomer(" + index + ")\">編集</button>"+
-            " <button onclick=\"deleteCustomer(" + index + ")\">削除</button>" +
+            item.customer.nameFirst +
+            "<button onclick=\"selectCustomer(" + item.originalIndex + ")\">選択</button>"+
+            "<button onclick=\"editCustomer(" + item.originalIndex + ")\">編集</button>"+
+            " <button onclick=\"deleteCustomer(" + item.originalIndex + ")\">削除</button>" +
             "</p>";
 
-            console.log(index);
     }
 
 }
