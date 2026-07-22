@@ -89,6 +89,20 @@ body {
     line-height: 1.8;
 }
 
+/* 登録済み顧客一覧のボタン位置調整 */
+.customer-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.customer-name {
+    width: 180px;
+    font-weight: bold;
+}
+.customer-buttons {
+    display: flex;
+    gap: 8px;
+}
 
 /* プレビュー時非表示 */
 @media print {

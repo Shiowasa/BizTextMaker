@@ -2,7 +2,7 @@ console.log("customer.js 読み込み成功");
 
 //データがあればデータ読込、ない場合、配列作成
 //const　customersで顧客情報を入れておく
-//localStorage.getItem("customers")でローカルストレージからデータを取得する
+//localStorage.getItem("customers")でローカルストレージからデータを取得
 //JSON.parse()で文字列をオブジェクトに変換する
 const customers =
     JSON.parse(localStorage.getItem("customers"))
@@ -40,15 +40,22 @@ customerListArea.innerHTML = "";
 
 //顧客情報を表示
 for (const item of sortedCustomers) {
-        customerListArea.innerHTML +=
-            "<p>" +
+    customerListArea.innerHTML +=
+    '<div class="customer-item">' +
+
+        '<span class="customer-name">' +
             item.customer.nameLast +
             " " +
             item.customer.nameFirst +
-            "<button onclick=\"selectCustomer(" + item.originalIndex + ")\">選択</button>"+
-            "<button onclick=\"editCustomer(" + item.originalIndex + ")\">編集</button>"+
-            " <button onclick=\"deleteCustomer(" + item.originalIndex + ")\">削除</button>" +
-            "</p>";
+        '</span>' +
+
+        '<div class="customer-buttons">' +
+            '<button onclick="selectCustomer(' + item.originalIndex + ')">選択</button>' +
+            '<button onclick="editCustomer(' + item.originalIndex + ')">編集</button>' +
+            '<button onclick="deleteCustomer(' + item.originalIndex + ')">削除</button>' +
+        '</div>' +
+
+    '</div>';
 
     }
 
@@ -174,13 +181,13 @@ customerForm.addEventListener('submit', function (event) {
 
     //顧客情報表示
     displayCustomers();
-    // console.log(
-    // localStorage.getItem("customers")
-    // );
-   
-    // console.log("保存完了");
 
     alert("登録完了");
+
+    //フォームのリセット
+    customerForm.reset();
+    //編集モード解除
+    editingIndex = null;
     
 
 });
