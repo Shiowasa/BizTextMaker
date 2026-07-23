@@ -28,26 +28,19 @@ body {
     gap: 10px;
 
 }
-.form-area input,
-.form-area select,
-.form-area textarea,
-.form-area button {
-    width: 100%;
-}
-
-/* .form-item {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-} */
 
 /* 入力欄 */
-.form-input {
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.client-type {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin: 10px 0;
+}
+.client {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: 0;
 }
 
 /* preview.html見た目設定 */

@@ -44,24 +44,32 @@ window.onload = function () {
     const createButton =
         document.getElementById("createButton");
 
-        //文書種類変更
-        documentType.addEventListener("change", function () {
+    // NOWボタン
+    const nowButton =
+        document.getElementById("nowButton");
 
-        //選択値
-        const selectedType = this.value;
+    // 文書種類変更
+    documentType.addEventListener("change", function () {
 
-        const templateText = templates[selectedType];
-        
-        //textAreaに反映
-        document.getElementById("documentContent").value =
-            templateText;
+    //選択値
+    const selectedType = this.value;
+    const templateText = templates[selectedType];
+    
+    //textAreaに反映
+    document.getElementById("documentContent").value =
+        templateText;
+    });
+
+    //NOWボタン
+    nowButton.addEventListener("click", function () {
+        const today = new Date().toISOString().split("T")[0];
+        document.getElementById("issueDate").value = today;
     });
 
     //文書生成
     createButton.addEventListener("click", function () {
         
     //alert("クリック成功");
-
 
         //入力値取得
         const issueDate =

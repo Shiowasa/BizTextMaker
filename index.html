@@ -30,14 +30,11 @@
     <div class="form-area">
         
         <!-- 発行日時 -->
-            <label class="form-item" for="issueDate">
-                発行日時
+            <label for="issueDate">
+                発行日
             </label>
-            <input 
-                type="date" 
-                id="issueDate" 
-                name="issueDate"
-            >
+            <input type="date" id="issueDate">
+            <button type="button" id="nowButton">NOW</button>
 
         <!-- 得意先名 -->
             <label class="form-item" for="customerName">
@@ -106,17 +103,14 @@
             <h2>顧客入力フォーム</h2>
     
             <!-- クライアントの種類を選択するラジオボタン -->
-            <p>
+            <p class="client-type">
                 <label class="client">
                     <input type="radio" name="clientType" value="corporate" required>
                     法人
                 </label>
 
                 <label class="client">
-                    <input 
-                    type="radio" 
-                    name="clientType" 
-                    value="individual">
+                    <input type="radio" name="clientType" value="individual">
                     個人
                 </label>
             </p>
