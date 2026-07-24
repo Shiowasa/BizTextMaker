@@ -17,6 +17,7 @@ body {
     line-height: 1.5;
     color: #333;
     margin: 30px;
+    max-width: 900px;
 }
 
 /* =====================
@@ -24,10 +25,10 @@ body {
 ===================== */
 .form-area,
 .customer-area {
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     margin-bottom: 40px;
 }
-
 
 /* =====================
         入力フォーム
@@ -80,6 +81,7 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font: inherit;
 }
 
 .button,
