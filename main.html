@@ -95,126 +95,191 @@
     </div>
     <!-- フォームエリアここまで -->
 
-    <!-- 顧客登録 -->
-    <div class="customer-area">
+<!-- 顧客登録 -->
+<div class="customer-area">
 
-        <form id="customerForm">
+    <form id="customerForm">
 
-            <h2>顧客入力フォーム</h2>
-    
-            <!-- クライアントの種類を選択するラジオボタン -->
-            <p class="client-type">
-                <label class="client">
-                    <input type="radio" name="clientType" value="corporate" required>
-                    法人
+        <h2>顧客入力フォーム</h2>
+
+            <!-- 顧客種別 -->
+            <div class="form-item">
+                <label>
+                    顧客種別
                 </label>
 
-                <label class="client">
-                    <input type="radio" name="clientType" value="individual">
-                    個人
-                </label>
-            </p>
+                <div class="client-type">
+                    <label class="client">
+                        <input
+                            type="radio"
+                            name="clientType"
+                            value="corporate"
+                            required>
+                        法人
+                    </label>
 
+                    <label class="client">
+                        <input
+                            type="radio"
+                            name="clientType"
+                            value="individual">
+                        個人
+                    </label>
+                </div>
+            </div>
 
-            <!-- 社名 / 氏名 -->
-            <p class="name-row">
+            <!-- 社名 / 氏 -->
+            <div class="form-item">
                 <label for="nameLast">
                     社名 / 氏
                 </label>
-                    <input 
-                    type="text" 
-                    id="nameLast" 
-                    placeholder="例）株式会社 または 山田" required>
-            
-                <label class="short-label" for="nameFirst" >
+
+                <input
+                    type="text"
+                    id="nameLast"
+                    class="form-input"
+                    placeholder="例）株式会社 または 山田"
+                    required>
+            </div>
+
+            <!-- 名 -->
+            <div class="form-item">
+                <label for="nameFirst">
                     名
                 </label>
-                <input 
-                class="short-input" 
-                type="text" 
-                id="nameFirst" 
-                placeholder="例）ABC または 太郎" required>
-            </p>
+
+                <input
+                    type="text"
+                    id="nameFirst"
+                    class="form-input"
+                    placeholder="例）ABC または 太郎"
+                    required>
+            </div>
 
             <!-- 部署 -->
-            <!-- <p >
+            <!--
+            <div class="form-item">
                 <label for="department">
                     部署
                 </label>
-                <input type="text" id="department" placeholder="例）営業部">
-            
-                <label class="short-label" for="contactPerson">
+
+                <input
+                    type="text"
+                    id="department"
+                    class="form-input"
+                    placeholder="例）営業部">
+            </div>
+            -->
+
+            <!-- 担当者 -->
+            <!--
+            <div class="form-item">
+
+                <label for="contactPerson">
                     担当者
                 </label>
-                <input class="short-input" type="text" id="contactPerson" placeholder="例）田中">
-            </p> -->
+
+                <input
+                    type="text"
+                    id="contactPerson"
+                    class="form-input"
+                    placeholder="例）田中">
+
+            </div>
+            -->
 
             <!-- 郵便番号 -->
-            <p>
+            <div class="form-item">
                 <label for="postalCode">
                     郵便番号
                 </label>
-                <input 
-                type="text" 
-                id="postalCode" 
-                placeholder="例）123-4567" required>
-            </p>
+
+                <input
+                    type="text"
+                    id="postalCode"
+                    class="form-input"
+                    placeholder="例）123-4567"
+                    required>
+            </div>
 
             <!-- 住所 -->
-            <p>
+            <div class="form-item">
                 <label for="address">
                     住所
                 </label>
-                <input 
-                type="text" 
-                id="address" 
-                placeholder="例）東京都千代田区1-2-3" required>
-            </p>
+
+                <input
+                    type="text"
+                    id="address"
+                    class="form-input"
+                    placeholder="例）東京都千代田区1-2-3"
+                    required>
+            </div>
 
             <!-- 電話番号 -->
-            <p>
+            <div class="form-item">
+
                 <label for="phoneNumber">
                     電話番号
                 </label>
-                <input 
-                type="tel"
-                id="phoneNumber" 
-                inputmode="numeric" 
-                placeholder="例）03-1234-5678" 
-                required>
-            </p>    
+
+                <input
+                    type="tel"
+                    id="phoneNumber"
+                    class="form-input"
+                    inputmode="numeric"
+                    placeholder="例）03-1234-5678"
+                    required>
+            </div>
 
             <!-- メールアドレス -->
-            <!-- <p>
+            <!--
+            <div class="form-item">
                 <label for="email">
                     メールアドレス
                 </label>
-                <input type="email" id="email" placeholder="例）user@example.com">
-            </p> -->
+
+                <input
+                    type="email"
+                    id="email"
+                    class="form-input"
+                    placeholder="例）user@example.com">
+
+            </div>
+            -->
 
             <!-- 備考 -->
-            <!-- <p>
-                <label  for="notes">
+            <!--
+            <div class="form-item">
+
+                <label for="notes">
                     備考
                 </label>
-                <textarea id="notes" placeholder="備考内容"></textarea>
-            </p> -->
+
+                <textarea
+                    id="notes"
+                    class="form-input"
+                    placeholder="備考内容"></textarea>
+
+            </div>
+            -->
 
             <!-- 登録ボタン -->
-            <p>
-                
-                <button class="button" type="submit" >
+            <div class="form-item">
+
+                <button
+                    class="button"
+                    type="submit">
+
                     登 録
+
                 </button>
-                
-            </p>
+            </div>
 
             <!-- 顧客一覧表示 -->
-             <h3>登録済み顧客一覧</h3>
-
-             <div id="customerListArea">
-
-             </div>
+            <h3>登録済み顧客一覧</h3>
+            <div id="customerListArea">
+            </div>
         </form>
 
     </div>
