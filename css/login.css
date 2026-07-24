@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.login-container {
+    width: 400px;
+    padding: 32px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+/* ログインロゴ */
+.login-logo {
+    display: block;
+    width: 160px;
+    margin: 0 auto 20px;
+}
+/* ログインフォーム */
+body {
+    margin: 0;
+    background-color: #f5f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family:
+        "Noto Sans JP",
+        sans-serif;
+}
+/* rログインボックス */
+.login-container {
+    width: 380px;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
