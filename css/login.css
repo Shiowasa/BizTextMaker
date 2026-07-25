@@ -33,11 +33,10 @@ body {
         sans-serif;
 }
 
-
 .login-container {
     width: 90%;
     max-width: 420px;
-    padding: 40px;
+    padding: 55px 40px 45px;
     background-color: 
         var(--card-color);
     border-radius: 
@@ -45,11 +44,32 @@ body {
     box-shadow: 
         var(--shadow);
 }
-
+.logo-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
 .login-logo {
-    display: block;
-    width: 160px;
-    margin: 0 auto 20px;
+    width: 100px;
+    flex-shrink: 0;
+}
+.logo-text{
+    width:260px;
+    text-align:left;
+}
+.logo-text h1 {
+    margin: 0;
+    font-size: 34px;
+    line-height: 1.1;
+    color: #243b53;
+    margin-left: 0;
+}
+.logo-text p {
+    margin: 2px 0 0;
+    font-size: 14px;
+    color: #666;
+    margin: 2px 0 0;
 }
 
 

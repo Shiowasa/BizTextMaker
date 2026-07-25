@@ -12,19 +12,27 @@
 <body>
 
     <div class="login-container">
-        <img
-            src="images/logo.png"
-            alt="BizTextMaker"
-            class="login-logo">
-        <h1>BizTextMaker</h1>
 
+        <!-- ロゴ -->
+        <div class="logo-area">
+
+            <img
+                src="images/txet.png"
+                alt="BizTextMaker"
+                class="login-logo">
+
+            <div class="logo-text">
+                <h1>BizTextMaker</h1>
+                <p>ビジネス文書を、もっと簡単に。</p>
+            </div>
+
+        </div>
+
+        <!-- ログインフォーム -->
         <form id="loginForm" autocomplete="off">
 
             <p>
-                <label for="userId">
-                    ユーザーID
-                </label>
-
+                <label for="userId">ユーザーID</label>
                 <input
                     type="text"
                     id="userId"
@@ -32,10 +40,7 @@
             </p>
 
             <p>
-                <label for="password">
-                    パスワード
-                </label>
-
+                <label for="password">パスワード</label>
                 <input
                     type="password"
                     id="password"
@@ -52,7 +57,9 @@
         </form>
 
     </div>
+
     <script src="js/login.js"></script>
+
 </body>
 
 </html>
