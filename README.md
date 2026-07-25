@@ -1,8 +1,7 @@
 # BizTextMaker
 
 ## 概要
-BizTextMaker は、
-ビジネス文書を簡単に作成し、プレビュー・印刷・PDF保存できることを目指したWebアプリです。
+BizTextMaker は、ログイン画面から利用できるシンプルなビジネス文書作成Webアプリです。文書テンプレートを利用して文書を作成し、プレビュー・印刷までをスムーズに行えます。
 
 ※アプリ開発初学者の為、いたってシンプルな構造となっています。
 
@@ -48,35 +47,36 @@ BizTextMaker は、
 ```text
 2026BizTextMaker_app
 │
-├── index.html   … 文書作成画面
-├── preview.html … プレビュー・印刷画面
-├── customer_btm.html    … 顧客登録画面
-├── README.md            … 概要
+├── index.html          … ログイン画面
+├── main.html           … 文書作成画面
+├── preview.html        … プレビュー・印刷画面
+├── customer_btm.html   … 顧客登録画面
+├── README.md           … プロジェクト概要
 │
 ├── css
-│   ├── style.css        … 共通スタイル
-│   └── style_btm.css    … 顧客登録用
+│   ├── style.css       … 共通スタイル
+│   └── login.css       … ログイン画面スタイル
+│
+├── images
+│   ├── BizTextMaker.png … ポートフォリオ用画像
+│   └── txet.png         … ログイン画面ロゴ
 │
 └── js
-    ├── script.js  … 文書作成・画面遷移
-    ├── preview.js … プレビュー・印刷
-    ├── customer.js  … 顧客登録
-    │                  localStorage
-    └── template.js  … 文書テンプレート
-
+    ├── login.js        … ログイン処理
+    ├── script.js       … 文書作成・画面遷移
+    ├── preview.js      … プレビュー・印刷
+    ├── customer.js     … 顧客登録・編集・削除
+    └── template.js     … 文書テンプレート
 
 ---
 
-## 今後追加・訂正予定機能(2026/07/12時)
+## 今後の改善予定
 
-✓ 顧客一覧の五十音順表示
-* 登録後のフォーム自動クリア（もしくはクリアボタン）
-* 顧客検索機能
-* Nowボタンによる日付自動入力
-* 入力チェックの強化
-* CSV出力機能の拡張
-* 顧客選定箇所の移動
-* PDF直接出力
-* 文書テンプレート見直し・追加
-* ログイン機能
-* 複数一括印刷機能（書類送付用）
+- 顧客検索機能
+- 登録後のフォーム自動クリア
+- 入力チェックの強化
+- CSV出力機能の拡張
+- PDF直接出力
+- 文書テンプレート追加
+- 顧客管理画面のUI改善
+- 複数文書の一括印刷
